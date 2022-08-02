@@ -1,0 +1,55 @@
+#T1 {
+    color:rgba(59, 193, 108, 0.8)
+}
+
+#T2 {
+    color:#ff55df;
+}
+
+#T3 {
+    color:blueviolet;
+}
+
+#Texto {
+    color: aliceblue;
+    background-image: url(fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*Centimetros*/
+#cm {
+    background-color: blue;
+    width: 1cm;
+    height: 1cm;
+}
+/*Milimetros*/
+#mm {
+    background-color: red;
+    width: 2cm;
+    height: 2cm;
+}
+/*Polegadas*/
+#in {
+    background-color: green;
+    width: 1in;
+    height: 1in;
+}
+/*Pixel*/
+#px {
+    background-color: darkgoldenrod;
+    width: 110px;
+    height: 110px;
+}
+/*Pontos*/
+#pt {
+    background-color: fuchsia;
+    width: 110pt;
+    height: 110pt;
+}
+/*Picas*/
+#pc {
+    background-color: greenyellow;
+    width: 10pc;
+    height: 10pc;
+}
