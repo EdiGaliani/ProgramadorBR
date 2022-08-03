@@ -1,0 +1,26 @@
+#base {
+    height: 10px;
+    background-color: red;
+}
+
+#container {
+    background-color: blue;
+    color: white;
+    margin-top: 10px;
+    padding: 10px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: darkmagenta;
+    border-radius: 5px;
+}
+
+.quadrado {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    border-width: 5px;
+    border-style: solid;
+    border-color: darkmagenta;
+    border-radius: 50px;
+
+}
