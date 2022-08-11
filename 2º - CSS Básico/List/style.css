@@ -1,0 +1,23 @@
+ul {
+    list-style-type: lower-greek;
+    list-style-position: inside;
+    margin: 0;
+    padding: 10px;
+    background-color: bisque;
+}
+
+ol {
+    list-style-type: upper-roman;
+    list-style-position: inside;
+    margin: 0;
+    padding: 10px;
+    background-color: aqua;
+}
+
+li {
+    border: 1px solid;
+    background-color: rgb(226, 216, 106);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 10px;
+}
