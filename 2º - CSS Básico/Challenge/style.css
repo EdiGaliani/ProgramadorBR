@@ -1,0 +1,38 @@
+body {
+    background-color: bisque;
+}
+
+.image {
+    background-image: url("./images/background.png");
+    width: 690px;
+    height: 300px;
+}
+
+.content {
+    padding: 10px;
+    padding-left: 20px;
+    font-family: 'Rubik Burned', cursive;
+    text-decoration: none;
+
+    
+}
+
+.ins {
+    list-style-image: url("./images/Insta.png");
+    padding: 10px;
+}
+
+.twi {
+    list-style-image: url("./images/Twitter.png");
+    padding: 10px;
+}
+
+.you {
+    list-style-image: url("./images/Youtube.png");
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
