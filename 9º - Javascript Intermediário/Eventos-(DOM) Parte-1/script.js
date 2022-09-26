@@ -8,7 +8,7 @@ function changeh1(input){
     h1.innerText = input.value;  
 }
 
-function hideInput(){
-    let inp = document.getElementsByTagName("input")[0]
-    inp.style.display = "inline";
-}
+function hideH1(){
+    let h1 = document.getElementsByTagName("h1")[3]
+    h1.style.display = "none";
+} 
