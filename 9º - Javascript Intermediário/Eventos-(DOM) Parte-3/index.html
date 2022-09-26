@@ -6,11 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        function loaded(){
+        function loaded() {
             
             let t = document.getElementById("titulo")
 
-            t.innerHTML = "Qualquer coisa";
+            // t.innerHTML = "Qualquer coisa";
+
+            t.addEventListener("mouseover", mudarText)
+            t.addEventListener("mouseout", mouseFora)
+        }
+
+        function mudarText() {
+            this.innerHTML = "Novo Texto";
+        }
+
+        function mouseFora() {
+            this.innerHTML = "Mouse fora do elemento";
         }
         
         
