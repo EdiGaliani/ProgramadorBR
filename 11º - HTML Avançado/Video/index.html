@@ -9,17 +9,19 @@
 </head>
 <body>
     <div class="container">
-        <video class="video" src="./assets/videos/regularShow.mp4">
+        <video id="video1" class="video" src="./assets/videos/regularShow.mp4">
 
         </video>
         <div class="controle">
-            <img class="btn" src="./assets/images/rewind.png">
-            <img class="btn" src="./assets/images/forward-button.png">
-            <img class="btn" src="./assets/images/minus.png">
-            <img class="btn" src="./assets/images/plus.png">
-            <img class="btn" src="./assets/images/play.png">
-            <img class="btn" src="./assets/images/stop.png">
+            <img class="btn" onclick="retroceder()" src="./assets/images/rewind.png">
+            <img class="btn" onclick="avancar()" src="./assets/images/forward-button.png">
+            <img class="btn" onclick="diminuir()" src="./assets/images/minus.png">
+            <img class="btn" onclick="aumentar()" src="./assets/images/plus.png">
+            <img class="btn" onclick="play()" src="./assets/images/play.png">
+            <img class="btn" onclick="stop()" src="./assets/images/stop.png">
         </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
