@@ -19,7 +19,7 @@ function aumentar() {
 }
 
 function play() {
-    video.play();
+    document.getElementById("video1").play();
 }
  
 function stop() {
