@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(194, 193, 193);
+ 
+}
+
+:root {
+    --var_color: rgb(146, 10, 10);
+    --square-size: 200px;
+}
+
+.p2 {
+    color: var(--var_color);
+    font-size: 25px;
+}
+
+.p5 {
+    color: var(--var_color);
+}
+
+.sqr1 {
+    width: var(--square-size);
+    height: var(--square-size);
+    background-color: black;
+}
+
+.sqr2 {
+    width: var(--square-size);
+    height: var(--square-size);
+    background-color: green;
+}
