@@ -1,0 +1,19 @@
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    font-size: 30px;
+}
+
+li:nth-last-of-type(even){
+    background-color: gold;
+}
+
+li:nth-last-of-type(odd){
+    background-color: grey;
+    color: white;
+}
