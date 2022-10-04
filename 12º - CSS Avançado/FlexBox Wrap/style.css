@@ -18,11 +18,12 @@
 
 .r2{
     flex-grow: 1;
+    align-self: flex-end;
     background-color: blue;
 }
 
 .r3{
-    flex-grow: 3;
+    flex-grow: 2;
     background-color: green;
 }
 
