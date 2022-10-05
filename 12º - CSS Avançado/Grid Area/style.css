@@ -1,0 +1,75 @@
+.container{
+    display: grid;
+    color: white;
+    background-color: darkgray;
+    padding: 10px;
+
+    grid-template-areas: "a2 a2 a2 a2 a2 a2"
+                         "a1 a1 a3 a3 a3 a3"
+                         "a1 a1 a5 a4 a4 a4"
+                         "a6 a6 a6 a6 a6 a6";
+}
+
+.r1{
+    
+    background-color: red;
+}
+
+.r2{
+    
+    background-color: blue;
+}
+
+.r3{
+    
+    background-color: green;
+}
+
+.item1{
+  grid-area: a1;
+}
+
+.item2{
+  grid-area: a2;
+}
+
+.item3{
+  grid-area: a3;
+}
+
+.item4{
+  grid-area: a4;
+}
+
+.item5{
+  grid-area: a5;
+}
+
+.item6{
+  grid-area: a6;
+}
+
+.item7 { grid-area: header; }
+.item8 { grid-area: menu; }
+.item9 { grid-area: main; }
+.item10 { grid-area: right; }
+.item11 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'menu header header header header header'
+    'menu main main main right right'
+    'footer footer footer footer footer footer';
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+

@@ -3,6 +3,9 @@
     background-color: darkgray;
     padding: 10px;
     color: white;
+
+    grid-row-gap: 10px;
+    grid-column-gap: 10px;
     
     grid-template-rows: 200px 100px;
     grid-template-columns: 1fr 2fr 1fr;
@@ -25,4 +28,5 @@
     
     background-color: green;
 }
+
 
