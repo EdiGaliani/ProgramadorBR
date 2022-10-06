@@ -1,0 +1,22 @@
+
+/* @keyframes changeColor {
+    from {background-color: red;}
+    to {background-color: blue;}
+} */
+
+@keyframes changeColor {
+    0% {background-color: red;}
+    25% {background-color: green;}
+    50% {background-color: blue;}
+    75% {background-color: yellow;}
+    100% {background-color: red;}
+}
+
+.box{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border: 2px solid;
+    animation-name: changeColor;
+    animation-duration: 9s;
+}
