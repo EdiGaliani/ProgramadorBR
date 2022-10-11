@@ -4,7 +4,7 @@ let usuarios = ["Adriano", "Marcia", "José"];
 
 function inserirUsuario(nome) {
 
-    let promise = new Promise(function(resolve, reject) {
+    let promise = new Promise((resolve, reject) => {
         setTimeout(() => {
             usuarios.push(nome);
             let error = true;
