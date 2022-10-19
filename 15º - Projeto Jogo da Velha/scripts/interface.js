@@ -9,17 +9,35 @@ document.addEventListener('DOMContentLoaded', () => {
 function handleClick(event) {
     let squareClicked = event.target;
     let position = squareClicked.id;
-    handleMove(position);
-    updateSquares();
+    if(handleMove(position)) {
+        let message = document.querySelector(".msg");
+        if(playerTime == 0) {
+           playerTime = "Jogador 1"; 
+        }else{
+            playerTime = "Jogador 2";
+        }
+        message.insertAdjacentHTML("afterend","Fim de Jogo - O Ganhador é o " + playerTime + "</br>");
+    }
+    
+    updateSquares(position);
 }
 
-function updateSquares() {
+function updateSquares(position) {
+    let square = document.getElementById(position.toString());
+    let symbol = board[position];
+    square.innerHTML = `<div class='${symbol}'></div>`;
+}
+
+let reset = document.getElementById("reset");
+reset.addEventListener('click', resetBoard);
+
+function resetBoard() {
+    board = ['', '', '', '', '', '', '', '', ''];
+    playerTime = 0;
+    gameOver = false;
     let squares = document.querySelectorAll(".square");
     squares.forEach((square) => {
-        let position = square.id;
-        let symbol = board[position];
-        if (symbol != "") {
-            square.innerHTML = `<div class='${symbol}'></div>`
-        }
-    })    
+        square.innerHTML = "";
+    })
+
 }
