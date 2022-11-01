@@ -1,3 +1,5 @@
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAdBSlzeZcCPOtCY3lX_gePLz9Ud6wgIwk",
@@ -9,5 +11,5 @@ const firebaseConfig = {
   measurementId: "G-6MJGDG0K4E"
 };
 
-// Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
