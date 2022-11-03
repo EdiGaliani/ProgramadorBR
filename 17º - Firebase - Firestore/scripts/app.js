@@ -13,23 +13,33 @@ const TURMA = "turmaA";
 
 let db = firebase.firestore();
 
-/* // Lê Todos os dados de uma colecão
-db.collection("turmaA").get()
-    .then((snapshot) => {
+// Lê Todos os dados de uma colecão
+// db.collection("turmaA").get()
+//     .then((snapshot) => {
+//       snapshot.forEach((doc) => {
+//         let aluno = doc.data();
+//         console.log(aluno.nome);
+//         // console.log(doc.data());
+//       })
+//     });
+
+db.collection("turmaA").onSnapshot((snapshot) => {
       snapshot.forEach((doc) => {
         let aluno = doc.data();
         console.log(aluno.nome);
         // console.log(doc.data());
       })
-    });
+  });
+
+
 
 // Lê 1 registro especifico apenas
 
-let docRef = db.collection("turmaA").doc("9wHzchJMnpqV5tePyLim");
-docRef.get().then((doc) => {
-  let aluno = doc.data();
-  console.log(aluno.nome);
-}) */
+// let docRef = db.collection("turmaA").doc("9wHzchJMnpqV5tePyLim");
+// docRef.get().then((doc) => {
+//   let aluno = doc.data();
+//   console.log(aluno.nome);
+// })
 
 /* db.collection("turmaA").where("nome", "==", "Edi").get()
     .then((snapshot) => {
@@ -56,7 +66,7 @@ db.collection(TURMA).add({
 
 // Inserindo o ID Manualmente
 
-db.collection(TURMA).doc("AlunoNovo").set({
+/* db.collection(TURMA).doc("AlunoNovo").set({
     nome: "Roberto",
     sobrenome: "Jeferson",
     nota: {
@@ -79,5 +89,5 @@ db.collection(TURMA).doc("I46qzqVqsaQV1IqGlNSo").update(
   console.log("Documento Recebido");
 }).catch(err => {
   console.log(err);
-})
+}) */
     
