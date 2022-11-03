@@ -9,6 +9,8 @@ const config = {
 };
 firebase.initializeApp(config);
 
+const TURMA = "turmaA";
+
 let db = firebase.firestore();
 
 /* // Lê Todos os dados de uma colecão
@@ -29,11 +31,53 @@ docRef.get().then((doc) => {
   console.log(aluno.nome);
 }) */
 
-db.collection("turmaA").where("nome", "==", "Edi").get()
+/* db.collection("turmaA").where("nome", "==", "Edi").get()
     .then((snapshot) => {
       snapshot.forEach((doc) => {
         let aluno = doc.data();
         console.log(aluno.nome, aluno.nota);
       })
-    });
+    }); */
+
+/* // Insere Automaticamente o ID
+
+db.collection(TURMA).add({
+    nome: "Marcos",
+    sobrenome: "Machado",
+    nota: {
+      nota1: 5.5,
+      nota2: 2.3
+    }
+}).then((doc) => {
+  console.log("Documento Recebido");
+}).catch(err => {
+  console.log(err);
+}) */
+
+// Inserindo o ID Manualmente
+
+db.collection(TURMA).doc("AlunoNovo").set({
+    nome: "Roberto",
+    sobrenome: "Jeferson",
+    nota: {
+      nota1: 6.5,
+      nota2: 7.6,
+    }
+}).then((doc) => {
+  console.log("Documento Recebido");
+}).catch(err => {
+  console.log(err);
+})
+
+// Usando o UPDATE no array
+
+db.collection(TURMA).doc("I46qzqVqsaQV1IqGlNSo").update(
+    {
+      advertencias: firebase.firestore.FieldValue.arrayRemove() // .increment, .arrayUnion
+    }
+).then(() => {
+  console.log("Documento Recebido");
+}).catch(err => {
+  console.log(err);
+})
     
