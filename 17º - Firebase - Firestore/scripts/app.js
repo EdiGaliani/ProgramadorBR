@@ -23,13 +23,13 @@ let db = firebase.firestore();
 //       })
 //     });
 
-db.collection("turmaA").onSnapshot((snapshot) => {
-      snapshot.forEach((doc) => {
-        let aluno = doc.data();
-        console.log(aluno.nome);
-        // console.log(doc.data());
-      })
-  });
+// db.collection("turmaA").onSnapshot((snapshot) => {
+//       snapshot.forEach((doc) => {
+//         let aluno = doc.data();
+//         console.log(aluno.nome);
+//         // console.log(doc.data());
+//       })
+//   });
 
 
 
@@ -90,4 +90,10 @@ db.collection(TURMA).doc("I46qzqVqsaQV1IqGlNSo").update(
 }).catch(err => {
   console.log(err);
 }) */
+
+db.collection(TURMA).doc("I46qzqVqsaQV1IqGlNSo").delete().then(() => {
+console.log("Documento Recebido");
+}).catch(err => {
+console.log(err);
+})
     
