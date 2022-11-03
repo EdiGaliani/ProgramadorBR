@@ -11,7 +11,7 @@ firebase.initializeApp(config);
 
 let db = firebase.firestore();
 
-// Lê Todos os dados de uma colecão
+/* // Lê Todos os dados de uma colecão
 db.collection("turmaA").get()
     .then((snapshot) => {
       snapshot.forEach((doc) => {
@@ -27,5 +27,13 @@ let docRef = db.collection("turmaA").doc("9wHzchJMnpqV5tePyLim");
 docRef.get().then((doc) => {
   let aluno = doc.data();
   console.log(aluno.nome);
-})
+}) */
+
+db.collection("turmaA").where("nome", "==", "Edi").get()
+    .then((snapshot) => {
+      snapshot.forEach((doc) => {
+        let aluno = doc.data();
+        console.log(aluno.nome, aluno.nota);
+      })
+    });
     
