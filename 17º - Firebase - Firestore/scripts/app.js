@@ -96,17 +96,57 @@ console.log("Documento Recebido");
 console.log(err);
 }) */
 
-let newUserEmail = "novoteste@teste.com";
-let newUserPassoword = "123abc";
-
 let auth = firebase.auth();
 
-auth.createUserWithEmailAndPassword(newUserEmail, newUserPassoword)
-    .then(user => {
-      console.log(user);
-    }).catch(error => {
-      console.log(error);
-    })
+// function createUse() {
+//     let newUserEmail = "novoteste@teste.com";
+//     let newUserPassoword = "123abc";
+
+//     auth.createUserWithEmailAndPassword(newUserEmail, newUserPassoword)
+//         .then(user => {
+//           console.log(user);
+//         }).catch(error => {
+//           console.log(error);
+//         })
+// }
+
+function login() {
+  let userEmail = "novoteste@teste.com";
+  let userPassword = "123abc";
+
+  auth.setPersistence(firebase.auth.Auth.Persistence.SESSION)
+      .then(() => {
+          auth.signInWithEmailAndPassword(userEmail, userPassword)
+                .then(loggedUser => {
+                  console.log(auth.currentUser);
+                }).catch(error => {
+                  console.log(error);
+                })
+  }).catch(error => {
+    console.log(error);
+  })
+}
+
+// login();
+
+auth.onAuthStateChanged(user => {
+  if(user) {
+    console.log(user)
+  }else{
+    console.log("Ninguém Logado");
+  }
+})
+
+function logout() {
+  auth.signOut().then(() => {
+    console.log("Usuário foi deslogado");
+  }).catch(error => {
+    console.log(error);
+  })
+}
+
+//setTimeout(login, 2000);
+
 
 
     
