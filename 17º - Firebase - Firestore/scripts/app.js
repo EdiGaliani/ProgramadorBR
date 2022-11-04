@@ -10,7 +10,6 @@ const config = {
 firebase.initializeApp(config);
 
 const TURMA = "turmaA";
-
 let db = firebase.firestore();
 
 // Lê Todos os dados de uma colecão
@@ -91,9 +90,23 @@ db.collection(TURMA).doc("I46qzqVqsaQV1IqGlNSo").update(
   console.log(err);
 }) */
 
-db.collection(TURMA).doc("I46qzqVqsaQV1IqGlNSo").delete().then(() => {
+/* db.collection(TURMA).doc("I46qzqVqsaQV1IqGlNSo").delete().then(() => {
 console.log("Documento Recebido");
 }).catch(err => {
 console.log(err);
-})
+}) */
+
+let newUserEmail = "novoteste@teste.com";
+let newUserPassoword = "123abc";
+
+let auth = firebase.auth();
+
+auth.createUserWithEmailAndPassword(newUserEmail, newUserPassoword)
+    .then(user => {
+      console.log(user);
+    }).catch(error => {
+      console.log(error);
+    })
+
+
     
