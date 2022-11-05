@@ -1,4 +1,4 @@
-const config = {
+/* const config = {
   apiKey: "AIzaSyAdBSlzeZcCPOtCY3lX_gePLz9Ud6wgIwk",
   authDomain: "colegio-5503b.firebaseapp.com",
   projectId: "colegio-5503b",
@@ -10,7 +10,54 @@ const config = {
 firebase.initializeApp(config);
 
 const TURMA = "turmaA";
+const LISTA = "lista";
 let db = firebase.firestore();
+
+db.collection(LISTA).get().then(snapshot => {
+      snapshot.forEach(item => {
+        console.log(item);
+      })
+  }) */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Lê Todos os dados de uma colecão
 // db.collection("turmaA").get()
@@ -96,7 +143,7 @@ console.log("Documento Recebido");
 console.log(err);
 }) */
 
-let auth = firebase.auth();
+// let auth = firebase.auth();
 
 // function createUse() {
 //     let newUserEmail = "novoteste@teste.com";
@@ -110,40 +157,40 @@ let auth = firebase.auth();
 //         })
 // }
 
-function login() {
-  let userEmail = "novoteste@teste.com";
-  let userPassword = "123abc";
+// function login() {
+//   let userEmail = "novoteste@teste.com";
+//   let userPassword = "123abc";
 
-  auth.setPersistence(firebase.auth.Auth.Persistence.SESSION)
-      .then(() => {
-          auth.signInWithEmailAndPassword(userEmail, userPassword)
-                .then(loggedUser => {
-                  console.log(auth.currentUser);
-                }).catch(error => {
-                  console.log(error);
-                })
-  }).catch(error => {
-    console.log(error);
-  })
-}
+//   auth.setPersistence(firebase.auth.Auth.Persistence.SESSION)
+//       .then(() => {
+//           auth.signInWithEmailAndPassword(userEmail, userPassword)
+//                 .then(loggedUser => {
+//                   console.log(auth.currentUser);
+//                 }).catch(error => {
+//                   console.log(error);
+//                 })
+//   }).catch(error => {
+//     console.log(error);
+//   })
+// }
 
-// login();
+// // login();
 
-auth.onAuthStateChanged(user => {
-  if(user) {
-    console.log(user)
-  }else{
-    console.log("Ninguém Logado");
-  }
-})
+// auth.onAuthStateChanged(user => {
+//   if(user) {
+//     console.log(user)
+//   }else{
+//     console.log("Ninguém Logado");
+//   }
+// })
 
-function logout() {
-  auth.signOut().then(() => {
-    console.log("Usuário foi deslogado");
-  }).catch(error => {
-    console.log(error);
-  })
-}
+// function logout() {
+//   auth.signOut().then(() => {
+//     console.log("Usuário foi deslogado");
+//   }).catch(error => {
+//     console.log(error);
+//   })
+// }
 
 //setTimeout(login, 2000);
 
