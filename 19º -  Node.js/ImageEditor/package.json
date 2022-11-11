@@ -1,0 +1,14 @@
+{
+  "name": "imageeditor",
+  "version": "1.0.0",
+  "description": "Editor de Imagens",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Edi",
+  "license": "ISC",
+  "dependencies": {
+    "sharp": "^0.31.2"
+  }
+}
