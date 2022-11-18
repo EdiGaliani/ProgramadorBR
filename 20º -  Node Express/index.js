@@ -10,6 +10,18 @@ app.get("/", (req, res) => {
     res.send("<h1>Hello World From GET</h1>");
 })
 
+app.post("/", (req, res) => {
+    res.send("<h1>Hello World From POST</h1>");
+})
+
+app.put("/", (req, res) => {
+    res.send("<h1>Hello World From PUT</h1>");
+})
+
+app.delete("/", (req, res) => {
+    res.send("<h1>Hello World From DELETE</h1>");
+})
+
 app.listen(PORT, () => {
     console.log(`Server Running on Port: ${PORT}`);
 })
