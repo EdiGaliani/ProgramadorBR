@@ -1,34 +1,26 @@
 const PORT = 3000;
 const express = require('express');
-// const bodyParser = require('body-parser'); //Deprecated
+const bodyParser = require('body-parser'); //Deprecated
+const posts = require('./model/posts');
 const app = express();
 
-const posts = [
-    {
-        id: "scacavev",
-        tittle: "Meu 1º Post",
-        description: "fvbasfbafbafb"
-    }
-]
+
 
 app.get("/all", (req, res) => {
     
-    res.json(JSON.stringify(posts));
+    res.json(JSON.stringify(posts.getAll()));
 })
 
-app.post("/new", express.json(), (req, res) => {
-    let id = generationID();
-    let tittle = req.body.tittle;
+app.post("/new", bodyParser.json(), (req, res) => {
+    
+    let title = req.body.title;
     let description = req.body.description;
-
-    posts.push({id, tittle, description});
+    console.log(typeof title);
+    posts.newPost(title, description);
+    
     res.send("Post Adicionado");
-});
+})
 
 app.listen(PORT, () => {
     console.log("Server Running On Port:", PORT)
 })
-
-function generationID() {
-    return Math.random().toString(36).substring(2, 9);
-}
