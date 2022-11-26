@@ -29,6 +29,11 @@ app.get("/", (req, res) => {
     // res.render("user", {name: "Edi Galiano", phone: "(17)99855-8857"})
 })
 
+app.get("/about", (req, res) => {
+    res.render("about");
+    // res.render("user", {name: "Edi Galiano", phone: "(17)99855-8857"})
+})
+
 
 
 
